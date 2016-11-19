@@ -15,11 +15,13 @@ WriteMakefile(
         'ExtUtils::MakeMaker' => 0,
     },
     BUILD_REQUIRES => {
-        'Test::More' => 0,
+        'Test::More'         => 0,
+        'Test::Mock::Simple' => 0.09,
     },
     PREREQ_PM => {
-        #'ABC'              => 1.6,
-        #'Foo::Bar::Module' => 5.0401,
+        'Carp'               => 1.0,
+        'JSON::XS'           => 3.0,
+        'LWP::UserAgent'     => 6.0,
     },
     dist  => { COMPRESS => 'gzip -9f', SUFFIX => 'gz', },
     clean => { FILES => 'Ticketmaster-API-*' },
